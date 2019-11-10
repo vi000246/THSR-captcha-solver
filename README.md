@@ -86,7 +86,7 @@ python main.py
 ```
 預設每個epoch會存一個checkpoint
 
-## Test
+## Testing
 可以使用main.py裡的test function做單張圖的inference。
 
 
