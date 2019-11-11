@@ -7,7 +7,7 @@
 
 本專案用Convolutional Neural Network來辨識高鐵訂票網站的驗證碼，並使用python+pytorch來實作。
 
-目前模型整張圖片(4個字元)辨識率達到99%以上。
+目前模型整張圖片(4個字元全對)辨識率達到98%以上(測試集為2000張)。
 
 ## Requirements
 * python==3.6
