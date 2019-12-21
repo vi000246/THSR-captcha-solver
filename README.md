@@ -5,8 +5,7 @@
 
 ## Introduction
 
-本專案用Convolutional Neural Network來辨識高鐵訂票網站的驗證碼，並使用python+pytorch來實作。
-
+本專案用Convolutional Neural Network來辨識高鐵訂票網站的驗證碼，並使用python+pytorch來實作。\
 目前模型整張圖片(4個字元全對)辨識率達到98%以上(測試集為2000張)。
 
 ## Requirements
@@ -20,20 +19,23 @@
 * torch==1.3.0+cu92
 * torchvision==0.4.1+cu92
 
+> torch及torchvision安裝方法可以參考[官方網站](https://pytorch.org/)
+
 ## 1. Dataset
-資料集原本打算寫一個自動產生模仿資料集的腳本，但考量到對這方面不熟且開發時間有限，因此後來決定全部先手動標記。之後在用前面手動標的資料訓練出一個堪用的model來做半自動的標記。(此repository僅提供100張驗證碼供測試用)
+資料集原本打算寫一個自動產生模仿資料集的腳本，但考量到對這方面不熟且開發時間有限，因此後來決定全部先手動標記。
+之後在用前面手動標的資料訓練出一個堪用的model來做半自動的標記。(此repository僅提供100張驗證碼供測試用)
 ### 1.1 Preprocess。
-前處理主要是參考下面Reference的2&3，主要分成兩個部分:
+前處理主要是參考[[1][2]](#reference)，主要分成兩個部分:
 1. 去雜訊
 2. 去除曲線
 
-不過實測後發現有無前處理的結果都差不多，可能是驗證碼不夠複雜基本的CNN就可以應付了。&nbsp;
+不過實測後發現有無前處理的結果都差不多，可能是驗證碼不夠複雜基本的CNN就可以應付了。\
 另外不論是否有做前處裡，進CNN之前一率會將圖片resize至128x128的大小。
 ### 注意
 > 記得將dataset目錄傳給dataset.py中Data class的dir參數
 
 ## 2. CNN Model
-下面為此專案的CNN架構，主要參考下面Reference 1
+下面為此專案的CNN架構，主要參考[[1]](#reference)
 
 ``` python
 CNN(
@@ -80,7 +82,7 @@ CNN(
 ```
 
 ## Training
-main.py的train funcion中有一些hyperparameters可以做調整，預設值也是參考下面Reference 1
+main.py的train funcion中有一些hyperparameters可以做調整，預設值也是參考[[1]](#reference)\
 train時只要直接執行main.py:
 ``` python
 python main.py
@@ -92,8 +94,8 @@ python main.py
 
 
 ## Reference
-1. [simple-railway-captcha-solver](https://github.com/JasonLiTW/simple-railway-captcha-solver)
-2. [[爬蟲實戰] 如何破解高鐵驗證碼 (1) - 去除圖片噪音點?](https://youtu.be/6HGbKdB4kVY)
-3. [[爬蟲實戰] 如何破解高鐵驗證碼 (2) - 使用迴歸方法去除多餘弧線?](https://youtu.be/4DHcOPSfC4c)
-4. [pytorch-book
-](https://github.com/chenyuntc/pytorch-book)
+[1] [simple-railway-captcha-solver](https://github.com/JasonLiTW/simple-railway-captcha-solver)\
+[2] [[爬蟲實戰] 如何破解高鐵驗證碼 (1) - 去除圖片噪音點?](https://youtu.be/6HGbKdB4kVY)\
+[3] [[爬蟲實戰] 如何破解高鐵驗證碼 (2) - 使用迴歸方法去除多餘弧線?](https://youtu.be/4DHcOPSfC4c)\
+[4] [pytorch-book
+](https://github.com/chenyuntc/pytorch-book)\
