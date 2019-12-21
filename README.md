@@ -98,4 +98,4 @@ python main.py
 [2] [[爬蟲實戰] 如何破解高鐵驗證碼 (1) - 去除圖片噪音點?](https://youtu.be/6HGbKdB4kVY)\
 [3] [[爬蟲實戰] 如何破解高鐵驗證碼 (2) - 使用迴歸方法去除多餘弧線?](https://youtu.be/4DHcOPSfC4c)\
 [4] [pytorch-book
-](https://github.com/chenyuntc/pytorch-book)\
+](https://github.com/chenyuntc/pytorch-book)
