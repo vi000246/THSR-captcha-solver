@@ -5,8 +5,11 @@
 
 ## Introduction
 
-本專案用Convolutional Neural Network來辨識高鐵訂票網站的驗證碼，並使用python+pytorch來實作。\
-目前模型整張圖片(4個字元全對)辨識率達到98%以上(測試集為2000張)。
+本專案用Convolutional Neural Network來辨識高鐵訂票網站的驗證碼，並使用pytorch來實作。\
+目前模型整張圖片(4個字元全對)辨識率達到98%以上(測試集為2000張)。 \
+\
+This project uses the convolutional neural network(CNN) to solve the captcha in Taiwan High Speed Rail booking website, and uses pytorch to implement it.
+The recognition rate of a whole captcha (4 characters correct) is over 98% (the size of test set is 2000).
 
 ## Requirements
 * python==3.6
